@@ -1,0 +1,90 @@
+---
+import "./about.css";
+---
+
+<div id="about">
+  <div id="who">
+    <h3 class="title">Who am I?</h3>
+    <div id="divider"></div>
+    <h4>A Web Designer / Developer Located In Our Lovely Earth</h4>
+    <h5>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse optio quae,
+      accusamus excepturi cupiditate ad! Vero pariatur nihil possimus corporis
+      voluptate molestiae cumque ullam dolore ratione esse! Alias, sed itaque?
+    </h5>
+    <a><button>Download My CV</button></a>
+    
+  </div>
+  <div id="info">
+    <h3 class="title">Personal Info</h3>
+    <div id="divider"></div>
+    <ul id="info-list"></ul>
+    <ul id="logo-list"></ul>
+
+  </div>
+  <div id="expertise">
+    <h3 class="title">My Expertise</h3>
+    <div id="divider"></div>
+    <div id="expertise-list"></div>
+  </div>
+</div>
+<script>
+  const informacion = {
+    Birthdate: "09/13/1996",
+    Email: "info@website.com",
+    Phone: "+ (123) 456-7890",
+    Skype: "John_Doe",
+    Address: "12345 Fake ST NoWhere AB Country",
+  };
+  const logos=["asdas","safas"];
+  const expertise = {
+    "Front-End FullStack in asd": [
+      "69",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse optio quae",
+    ],
+    "Front-End FullStack in uwu": [
+      "69",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse optio quae",
+    ],
+    "Front-End FullStack in owo": [
+      "69",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse optio quae",
+    ],
+  };
+  
+  const infoList = document.getElementById("info-list");
+  const logoList = document.getElementById("logo-list");
+  const expertiseList = document.getElementById("expertise-list");
+  for (let key in informacion) {
+    if (informacion.hasOwnProperty(key)) {
+      let value = informacion[key as keyof typeof informacion];
+
+      let listItem = document.createElement("li");
+      listItem.innerHTML = `<strong>${key}:</strong> ${value}`;
+
+      infoList?.appendChild(listItem);
+    }
+  }
+  for (let item in logos) {
+    let logoitem =document.createElement("li");
+    logoitem.innerHTML=`
+        <a href="#">${logos[item]}</a>
+    `;
+    logoList?.appendChild(logoitem);
+  }
+  for (let key in expertise) {
+    let value = expertise[key as keyof typeof expertise];
+
+    let expertiseItem = document.createElement("div");
+    expertiseItem.innerHTML = `
+                <div class="card-about">
+                    <a class="logo">${value[0]}</a>
+                    <div class="expertise">
+                        <h3>${key}</h3>
+                        <h4>${value[1]}</h4>
+                    </div>
+                </div>
+    `;
+    expertiseList?.appendChild(expertiseItem);
+  }
+</script>

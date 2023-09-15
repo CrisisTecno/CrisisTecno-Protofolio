@@ -1,0 +1,89 @@
+#about{
+    background-color: white;
+    width: 100%;
+    color: black;
+    display: flex;
+    padding-top: 1.8rem;
+    border-top: #c77904 solid 1px; 
+    border-bottom:#c77904 solid 1px;  ;
+}
+#about div{
+    flex: 1;
+    
+}
+#who,#info,#expertise{
+    padding-left: 2em;
+    padding-right: 2em;
+}
+ul {
+    list-style-type: none;
+}
+
+.card-about{
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    padding: 0px 0.5em 0px 0.5em;
+}
+.card-about .logo{
+    width: 50px;
+}
+.card-about .expertise{
+    display: flex;
+    flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ 
+}
+.card-about .expertise h3{
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+}
+.card-about .expertise h4{
+    font-size: 0.8em;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+.title{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+#divider{
+    width: 15rem;
+    height: 2px;
+    background-color:#c77904 ;
+}
+#who a{
+    text-decoration: none; /* Eliminar el subrayado por defecto */
+    color: inherit; /* Heredar el color del texto del elemento contenedor */
+    cursor: pointer;
+    font: inherit;
+    width: 100%;
+    padding-left: 25%;
+}
+#info li{
+padding-bottom: 15px;
+}
+button{
+    appearance: none; /* Anula el estilo de apariencia del botón */
+  background: transparent;
+  border-radius: 1rem; /* Fondo transparente */
+  border: #c77904 solid 2px; /* Sin borde */
+  padding: 10px; /* Sin relleno */
+  margin: 0; /* Sin margen */
+  font: inherit; /* Utiliza la fuente heredada */
+  color: #c77904 ; /* Utiliza el color heredado */
+  cursor: pointer; /* Cursor de puntero */
+  outline: none;
+}
+button:hover{
+    background: #c77904;
+    color:white;
+}
+#logo-list{
+    display: flex;
+    gap: 1rem;
+}
